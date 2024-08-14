@@ -21,3 +21,7 @@
             apiServiceKey: ${{ secrets.CONTRAST__API__SERVICE_KEY }}
             apiOrgId: ${{ secrets.CONTRAST__API__ORGANIZATION }}
             branch: main
+        - uses: actions/upload-artifact@v4
+          with:
+            name: SARIF report
+            path: results.sarif
